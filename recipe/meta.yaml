@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/unicorn-binance-rest-api-{{ version }}.tar.gz
-  sha256: 
+  sha256: c1958d79f938b3a5e736bff94e5accc27e1a83c6818480ad82e374d5c8a0fd59
 
 build:
   number: 0

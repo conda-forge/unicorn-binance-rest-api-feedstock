@@ -11,13 +11,13 @@ source:
   sha256: 5b581d6da74d15f48d42f00ed62ea7bc7b07831810f6e08c1af38cdde7e82cd2
 
 build:
-  number: 0
+  number: 1
+  skip: True  # [py<35]
   script: {{ PYTHON }} -m pip install . -vv
-
+  
 requirements:
-  host:
-    - pip
-    - python >=3.6
+  build:
+    - {{ compiler("cxx") }}
     - certifi
     - colorama
     - cryptography
@@ -26,11 +26,25 @@ requirements:
     - PySocks
     - regex
     - requests
-    - requests[socks]
+    - requests  # [socks]
+    - service_identity
+    - ujson
+  host:
+    - pip
+    - python
+    - certifi
+    - colorama
+    - cryptography
+    - dateparser
+    - pyopenssl
+    - PySocks
+    - regex
+    - requests
+    - requests  # [socks]
     - service_identity
     - ujson
   run:
-    - python >=3.6  
+    - python
     - certifi
     - colorama
     - cryptography
@@ -39,7 +53,7 @@ requirements:
     - PySocks
     - regex
     - requests
-    - requests[socks]
+    - requests  # [socks]
     - service_identity
     - ujson
 
@@ -65,3 +79,4 @@ about:
 extra:
   recipe-maintainers:
     - oliver-zehentleitner
+    

@@ -17,7 +17,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python
     - certifi
     - colorama
     - cryptography
@@ -30,7 +30,7 @@ requirements:
     - service_identity
     - ujson
   run:
-    - python >=3.6  
+    - python
     - certifi
     - colorama
     - cryptography

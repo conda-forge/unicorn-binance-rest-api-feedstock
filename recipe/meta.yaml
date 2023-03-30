@@ -30,7 +30,7 @@ requirements:
     - service_identity
     - ujson
   run:
-    - python >=3.6  
+    - python >=3.6
     - certifi
     - colorama
     - cryptography

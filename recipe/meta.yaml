@@ -27,7 +27,7 @@ requirements:
     - PySocks
     - regex
     - requests
-    - requests[socks]
+    - requests  # [socks]
     - service_identity
     - ujson
   run:
@@ -40,7 +40,7 @@ requirements:
     - PySocks
     - regex
     - requests
-    - requests[socks]
+    - requests  # [socks]
     - service_identity
     - ujson
 

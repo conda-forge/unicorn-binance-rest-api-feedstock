@@ -1,11 +1,11 @@
-About unicorn-binance-rest-api
-==============================
+About unicorn-binance-rest-api-feedstock
+========================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/unicorn-binance-rest-api-feedstock/blob/main/LICENSE.txt)
 
 Home: https://www.lucit.tech/unicorn-binance-rest-api.html
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/unicorn-binance-rest-api-feedstock/blob/main/LICENSE.txt)
 
 Summary: An unofficial Python API to use the Binance REST API`s.
 

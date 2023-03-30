@@ -14,8 +14,21 @@ build:
   number: 1
   skip: True  # [py<35]
   script: {{ PYTHON }} -m pip install . -vv
-
+  
 requirements:
+  build:
+    - {{ compiler("cxx") }}
+    - certifi
+    - colorama
+    - cryptography
+    - dateparser
+    - pyopenssl
+    - PySocks
+    - regex
+    - requests
+    - requests  # [socks]
+    - service_identity
+    - ujson
   host:
     - pip
     - python
@@ -27,7 +40,7 @@ requirements:
     - PySocks
     - regex
     - requests
-    - requests[socks]
+    - requests  # [socks]
     - service_identity
     - ujson
   run:
@@ -40,7 +53,7 @@ requirements:
     - PySocks
     - regex
     - requests
-    - requests[socks]
+    - requests  # [socks]
     - service_identity
     - ujson
 
@@ -66,3 +79,4 @@ about:
 extra:
   recipe-maintainers:
     - oliver-zehentleitner
+    

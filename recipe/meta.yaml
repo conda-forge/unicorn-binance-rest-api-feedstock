@@ -13,6 +13,7 @@ source:
 build:
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
+  universal: true
 
 requirements:
   host:
@@ -66,10 +67,3 @@ extra:
   recipe-maintainers:
     - oliver-zehentleitner
     
-targets:
-  - cpython 3.6.*
-  - cpython 3.7.*
-  - cpython 3.8.*
-  - cpython 3.9.*
-  - cpython 3.10.*
-  - cpython 3.11.*

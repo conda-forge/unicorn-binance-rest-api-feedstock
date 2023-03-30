@@ -23,9 +23,11 @@ requirements:
     - cryptography
     - dateparser
     - pyopenssl
+    - PySocks
     - python >=3.6
     - regex
     - requests
+    - requests[socks]
     - service_identity
     - ujson
   run:
@@ -34,9 +36,11 @@ requirements:
     - cryptography
     - dateparser
     - pyopenssl
+    - PySocks
     - python >=3.6
     - regex
     - requests
+    - requests[socks]
     - service_identity
     - ujson
 

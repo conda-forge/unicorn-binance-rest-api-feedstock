@@ -1,5 +1,5 @@
 {% set name = "unicorn-binance-rest-api" %}
-{% set version = "1.7.0" %}
+{% set version = "1.8.1" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/unicorn-binance-rest-api-{{ version }}.tar.gz
-  sha256: 5b581d6da74d15f48d42f00ed62ea7bc7b07831810f6e08c1af38cdde7e82cd2
+  sha256: d4914b9e8bf966f1e9dee8eef4765133904849627906cf565c777479f6a31e5f
 
 build:
-  number: 2
+  number: 0
   skip: True  # [py<35]
   script: {{ PYTHON }} -m pip install . -vv
   

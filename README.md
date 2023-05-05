@@ -11,7 +11,7 @@ Summary: An unofficial Python API to use the Binance REST API`s.
 
 Development: https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api
 
-Documentation: https://unicorn-binance-rest-api.docs.lucit.tech/
+Documentation: https://unicorn-binance-rest-api.docs.lucit.tech
 
 An unofficial Python API to use the Binance REST API`s (com+testnet, com-margin+testnet, com-isolated_margin+testnet,
 com-futures+testnet, us, tr) in a easy, fast, flexible, robust and fully-featured way.

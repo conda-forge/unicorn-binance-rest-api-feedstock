@@ -1,5 +1,5 @@
 {% set name = "unicorn-binance-rest-api" %}
-{% set version = "1.9.0" %}
+{% set version = "1.10.0" %}
 
 
 package:
@@ -8,13 +8,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/unicorn-binance-rest-api-{{ version }}.tar.gz
-  sha256: 1449bad74603e885aa3b7f236ba899ff3831521a3be299b7d362c80c3b979c48
+  sha256: 51d27b1ede37db7b473d67e54c6b10cfb85a4aa48c04be0f17bd6dc5fddb3ade
 
 build:
   number: 0
-  skip: True  # [py<35]
+  skip: true  # [py<35]
   script: {{ PYTHON }} -m pip install . -vv
-  
+
 requirements:
   build:
     - {{ compiler("cxx") }}
@@ -79,4 +79,3 @@ about:
 extra:
   recipe-maintainers:
     - oliver-zehentleitner
-    

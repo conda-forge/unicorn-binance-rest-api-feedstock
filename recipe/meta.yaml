@@ -11,13 +11,14 @@ source:
   sha256: 51d27b1ede37db7b473d67e54c6b10cfb85a4aa48c04be0f17bd6dc5fddb3ade
 
 build:
-  number: 1
+  number: 2
   skip: true  # [py<35]
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
     - {{ compiler("cxx") }}
+    - {{ stdlib("c") }}
     - certifi
     - colorama
     - cryptography

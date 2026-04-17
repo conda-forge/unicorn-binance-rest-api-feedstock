@@ -1,5 +1,5 @@
 {% set name = "unicorn-binance-rest-api" %}
-{% set version = "1.10.0" %}
+{% set version = "2.10.0" %}
 
 
 package:
@@ -7,53 +7,35 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/unicorn-binance-rest-api-{{ version }}.tar.gz
-  sha256: 51d27b1ede37db7b473d67e54c6b10cfb85a4aa48c04be0f17bd6dc5fddb3ade
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/unicorn_binance_rest_api-{{ version }}.tar.gz
+  sha256: 933bb24463eb6bba5f581eeb6c8346be01f206d8451d1542abf8d92430b95058
 
 build:
-  number: 1
-  skip: true  # [py<35]
-  script: {{ PYTHON }} -m pip install . -vv
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   build:
-    - {{ compiler("cxx") }}
-    - certifi
-    - colorama
-    - cryptography
-    - dateparser
-    - pyopenssl
-    - PySocks
-    - regex
-    - requests
-    - requests  # [socks]
-    - service_identity
-    - ujson
+    - {{ compiler('c') }}
+    - {{ stdlib('c') }}
   host:
-    - pip
     - python
-    - certifi
-    - colorama
-    - cryptography
-    - dateparser
-    - pyopenssl
-    - PySocks
-    - regex
-    - requests
-    - requests  # [socks]
-    - service_identity
-    - ujson
+    - pip
+    - setuptools
+    - wheel
+    - cython
+    - mypy
   run:
     - python
-    - certifi
+    - cython
+    - certifi >=2025.6.15
     - colorama
-    - cryptography
+    - cryptography >=45.0.4
     - dateparser
     - pyopenssl
-    - PySocks
+    - pysocks
     - regex
-    - requests
-    - requests  # [socks]
+    - requests >=2.32.4
     - service_identity
     - ujson
 
@@ -66,15 +48,17 @@ test:
     - pip
 
 about:
-  home: https://www.lucit.tech/unicorn-binance-rest-api.html
-  summary: An unofficial Python API to use the Binance REST API`s.
+  home: https://github.com/oliver-zehentleitner/unicorn-binance-rest-api
+  summary: An unofficial Python API to use the Binance REST APIs.
   description: |
-    An unofficial Python API to use the Binance REST API`s (com+testnet, com-margin+testnet, com-isolated_margin+testnet, 
-    com-futures+testnet, us, tr) in a easy, fast, flexible, robust and fully-featured way.
+    An unofficial Python API to use the Binance REST APIs (com+testnet,
+    com-margin+testnet, com-isolated_margin+testnet, com-futures+testnet,
+    us, tr) in an easy, fast, flexible, robust and fully-featured way.
+    Part of the UNICORN Binance Suite.
   license: MIT
   license_file: LICENSE
-  dev_url: https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api
-  doc_url: https://unicorn-binance-rest-api.docs.lucit.tech
+  dev_url: https://github.com/oliver-zehentleitner/unicorn-binance-rest-api
+  doc_url: https://oliver-zehentleitner.github.io/unicorn-binance-rest-api
 
 extra:
   recipe-maintainers:

@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/unicorn_binance_rest_api-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/unicorn_binance_rest_api-{{ version }}.tar.gz
   sha256: 35e1f3aad3aa7080d8386e8231c226d8c7a7c1bbde56182a6f7fd449791ab3cf
 
 build:
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
